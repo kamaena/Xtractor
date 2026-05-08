@@ -16,6 +16,10 @@ Xtractor takes raw contract text and extracts:
 - **Notice Requirements** — how and when notices must be delivered
 - **Key Obligations** — the primary duties of each party
 
+## Demo
+
+https://github.com/user-attachments/assets/6c05abe6-c55d-4fce-acff-c3819ef8069a
+
 ## Tech stack
 
 - **Frontend:** React (Create React App)
