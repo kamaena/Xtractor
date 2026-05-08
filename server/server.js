@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const Groq = require('groq-sdk');
+const Groq = require('groq-sdk').default;
 
 const app = express();
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
@@ -30,7 +30,7 @@ app.post('/api/extract', async (req, res) => {
 
   try {
     const completion = await groq.chat.completions.create({
-      model: 'llama3-8b-8192',
+      model: 'llama-3.3-70b-versatile',
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user', content: contractText },

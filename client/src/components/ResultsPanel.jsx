@@ -13,8 +13,13 @@ const FIELD_LABELS = [
 function ResultsPanel({ data }) {
   return (
     <div style={styles.grid}>
-      {FIELD_LABELS.map(({ key, label }) => (
-        <FieldCard key={key} label={label} value={data[key]} />
+      {FIELD_LABELS.map(({ key, label }, i) => (
+        <FieldCard
+          key={key}
+          label={label}
+          value={data[key]}
+          last={i === FIELD_LABELS.length - 1}
+        />
       ))}
     </div>
   );

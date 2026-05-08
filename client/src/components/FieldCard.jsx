@@ -1,6 +1,6 @@
-function FieldCard({ label, value }) {
+function FieldCard({ label, value, last }) {
   return (
-    <div style={styles.card}>
+    <div style={{ ...styles.card, ...(last ? styles.cardLast : {}) }}>
       <div style={styles.label}>{label}</div>
       {value ? (
         <div style={styles.value}>{value}</div>
@@ -32,6 +32,9 @@ const styles = {
     fontSize: '14px',
     color: '#1e293b',
     lineHeight: '1.5',
+  },
+  cardLast: {
+    gridColumn: '1 / -1',
   },
   notFound: {
     fontSize: '14px',
